@@ -1,0 +1,215 @@
+/* ==== Reset and Base ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f9fafc;
+  color: #2c3e50;
+  line-height: 1.8;
+}
+
+/* ==== Header and Navigation ==== */
+header {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+nav a {
+  margin-left: 25px;
+  font-size: 0.95rem;
+  color: #555;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #0077cc;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #0077cc;
+  left: 0;
+  bottom: -5px;
+}
+
+/* ==== Sections ==== */
+.section {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  margin-top: 40px;
+}
+
+/* ==== Section Titles ==== */
+.section-title {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077cc;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #0077cc;
+  margin: 10px auto 0;
+}
+
+/* ==== Introduction ==== */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro .text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.intro .hello {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0077cc;
+}
+
+/* ==== Projects ==== */
+.projects-list {
+  list-style: none;
+  padding: 0;
+}
+
+.projects-list li {
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  border-left: 3px solid #0077cc;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.projects-list li:hover {
+  background-color: #e5f2ff;
+}
+
+.projects-list li strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.projects-list li span {
+  float: right;
+  font-size: 0.9rem;
+}
+
+.projects-list li p {
+  margin-top: 8px;
+  color: #555;
+}
+
+/* ==== Social Links ==== */
+.socials {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.socials a {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  color: #0077cc;
+  border: 1px solid #0077cc;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.socials a:hover {
+  background-color: #0077cc;
+  color: white;
+}
+
+/* ==== CV List ==== */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+ul li a {
+  text-decoration: underline;
+  color: #0077cc;
+  font-weight: 500;
+}
+
+/* ==== Responsive Design ==== */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro .text {
+    max-width: 100%;
+  }
+
+  nav {
+    font-size: 0.85rem;
+  }
+
+  .projects-list li span {
+    float: none;
+    display: block;
+    margin-top: 5px;
+  }
+}
+
