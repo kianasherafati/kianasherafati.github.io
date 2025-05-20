@@ -12,6 +12,31 @@ body {
   line-height: 1.8;
 }
 
+/* ==== Skip Link ==== */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1000;
+}
+
+.skip-link:focus {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
 /* ==== Header and Navigation ==== */
 header {
   background-color: #ffffff;
@@ -162,11 +187,11 @@ nav a.active::after {
 .socials a {
   display: inline-block;
   margin: 0 12px;
-  padding: 8px 14px;
+  padding: 12px 18px;
   font-size: 0.9rem;
   color: #0077cc;
   border: 1px solid #0077cc;
-  border-radius: 20px;
+  border-radius: 24px;
   text-decoration: none;
   transition: all 0.3s;
 }
