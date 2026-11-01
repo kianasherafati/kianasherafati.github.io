@@ -28,7 +28,7 @@ document.querySelectorAll('.copy-email').forEach(button => {
   button.addEventListener('click', async () => {
     const status = button.parentElement.querySelector('.copy-status');
     try {
-      await navigator.clipboard.writeText('kiana.sherafati@aut.ac.ir');
+      await navigator.clipboard.writeText('kiana.sherafati@gmail.com');
       status.textContent = 'Email address copied.';
     } catch {
       status.textContent = 'Please use the email link above.';
