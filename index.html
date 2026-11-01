@@ -25,231 +25,103 @@
     <a class="brand" href="index.html" aria-label="Kiana Sherafati — home"><span class="monogram" aria-hidden="true">k.</span><span class="brand-name">Kiana Sherafati</span></a>
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" aria-current="page">About</a><a href="projects.html">Projects</a><a href="cv.html">CV</a>
-      <a class="nav-contact" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+      <a class="nav-contact" href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="main" class="container">
-  <section class="hero" aria-labelledby="intro-title">
+  <section class="hero home-hero" id="about" aria-labelledby="intro-title">
     <div class="hero-copy">
-<p class="eyebrow">Computer engineering · Amirkabir University</p>
-<h1 id="intro-title">Kiana<br><em>Sherafati.</em>
+      <p class="eyebrow">Computer engineering · Tehran, Iran</p>
+      <h1 id="intro-title">Kiana<br><em>Sherafati.</em>
 </h1>
-<p class="hero-intro">Curious about how things work.<br>Even more curious about <strong>what they can become.</strong>
+      <p class="hero-intro">Final-year B.Sc. student at<br><strong>Amirkabir University of Technology.</strong>
 </p>
-<p class="prose">I'm a final-year computer engineering student in Tehran, working at the intersection of language models, retrieval, and data systems.</p>
-<div class="actions"><a class="button" href="projects.html">Explore my work <span aria-hidden="true">↗</span></a><a class="button secondary" href="cv.html">Academic CV <span aria-hidden="true">↓</span></a>
+      <p class="prose">My interests are in retrieval-augmented generation, machine learning, and data systems. My undergraduate thesis explores natural-language access to ERP databases.</p>
+      <div class="actions"><a class="button" href="Academic_CV.pdf" target="_blank" rel="noopener">CV (PDF) <span aria-hidden="true">↗</span></a><a class="text-link" href="#research">Research <span aria-hidden="true">↓</span></a>
 </div>
-<p class="hero-note">Learning through building, teaching, and asking questions.</p>
+      <div class="intro-links"><a href="mailto:kiana.sherafati@aut.ac.ir">kiana.sherafati@aut.ac.ir</a><span><a href="https://github.com/kianasherafati" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kiana-sherafati-23b424323/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span>
 </div>
-    <figure class="portrait-wrap"><img src="portrait.jpg" width="720" height="960" alt="Kiana Sherafati sitting in front of colorful bookshelves" fetchpriority="high"><figcaption><span>Hi, I'm Kiana.</span><span>Tehran, Iran</span></figcaption><span class="portrait-note" aria-hidden="true">Always a student.</span>
+    </div>
+    <figure class="portrait-wrap"><img src="portrait.jpg" width="720" height="960" alt="Kiana Sherafati sitting in front of colorful bookshelves" fetchpriority="high"><figcaption><span>Hi, I'm Kiana.</span><span>Tehran, Iran</span></figcaption>
 </figure>
   </section>
-  <div class="interest-strip" aria-label="Interests"><span class="micro">Things that keep me curious</span><span>Language &amp; learning</span><i aria-hidden="true">✳</i><span>Data systems</span><i aria-hidden="true">✳</i><span>Human experience</span>
-</div>
-  <section class="section section-grid reveal" id="about" aria-labelledby="about-title">
-<p class="section-index"><span>01 /</span> A little about me</p>
-<div>
-<h2 id="about-title">An engineering mind.<br>A <em>human perspective.</em>
-</h2>
-<div class="prose">
-<p>I'm completing my B.Sc. in Computer Engineering at <strong>Amirkabir University of Technology</strong>, with 137 of 140 credits completed and my thesis as the sole remaining requirement. My GPA is <strong>17.77 / 20</strong>.</p>
-<p>My thesis explores retrieval-augmented Text-to-SQL for ERP reporting. Alongside my studies, I work part-time as an ERP specialist at Green Dataware and have been a teaching assistant across AI, data, systems, and software engineering courses.</p>
-<p>I'm drawn to work that combines technical depth with practical impact. These are some of the directions I'd like to explore further:</p>
-</div>
-<div class="interest-list">
-<div class="interest-item">
-<h3>Language models &amp; retrieval</h3>
-<p>Schema retrieval, reranking, and grounded generation for natural-language access to structured data.</p>
-</div>
-<div class="interest-item">
-<h3>Machine learning foundations</h3>
-<p>Understanding learning from the inside: automatic differentiation, neural networks, and probabilistic inference.</p>
-</div>
-<div class="interest-item">
-<h3>Databases &amp; business intelligence</h3>
-<p>Turning complex data relationships into useful queries, reports, and dashboards.</p>
-</div>
-<div class="interest-item">
-<h3>Software &amp; human experience</h3>
-<p>Building clear interfaces and dependable systems around the people who use them.</p>
-</div>
-</div>
-</div>
-</section>
   <section class="section section-grid reveal" id="research" aria-labelledby="research-title">
-  <p class="section-index"><span>02 /</span> Research in focus</p>
-  <div>
-    <p class="micro">Undergraduate thesis · October 2026</p>
-    <h2 id="research-title">From a question<br>to the <em>right context.</em>
+    <p class="section-index">Research</p>
+    <div>
+<h2 id="research-title">Language, retrieval<br>&amp; <em>structured data.</em>
 </h2>
-    <p class="prose">My thesis explores retrieval-augmented Text-to-SQL for ERP reporting: finding the tables and relationships that help a language model translate an English question into T-SQL.</p>
-    <p class="research-supervisor">Amirkabir University of Technology<br>Supervisor: Dr. Masoumeh Taromi Rad</p>
-    <ol class="research-pipeline" aria-label="Research pipeline">
-      <li><span>01</span><strong>Retrieve</strong><small>Dense + hybrid schema search</small>
-</li>
-      <li><span>02</span><strong>Rerank</strong><small>Relevant tables &amp; relations</small>
-</li>
-      <li><span>03</span><strong>Generate</strong><small>Schema-grounded T-SQL</small>
-</li>
-      <li><span>04</span><strong>Validate</strong><small>Checks &amp; read-only preview</small>
-</li>
-    </ol>
-    <div class="research-result"><strong>75.27% <span aria-hidden="true">→</span><span class="sr-only">to</span> 80.77%</strong>
-<p>Macro schema-retrieval recall at 20 tables, before and after reranking in my thesis experiments.</p>
-</div>
-    <p class="research-note">The public edition includes reusable components and a synthetic demo. Company schemas and connection details remain outside the repository.</p>
-    <a class="text-link" href="https://github.com/kianasherafati/erp-text2sql-rag-portfolio" target="_blank" rel="noopener noreferrer">Explore the thesis repository <span aria-hidden="true">↗</span></a>
-  </div>
-</section>
-<section class="section" aria-labelledby="work-title">
-<div class="section-heading">
-<div>
-<p class="section-index"><span>03 /</span> From foundations to implementation</p>
-<h2 id="work-title">Learning by <em>building.</em>
+      <h3 class="academic-title">ERP Text-to-SQL with Retrieval-Augmented Generation</h3>
+      <p class="research-supervisor">Undergraduate thesis · October 2026<br>Supervisor: Dr. Masoumeh Taromi Rad</p>
+      <p class="prose">I built a pipeline that retrieves and reranks relevant database schema before generating T-SQL from English reporting questions. The work combines schema retrieval, language-model generation, and validation, with a Streamlit reporting interface.</p>
+      <a class="text-link" href="https://github.com/kianasherafati/erp-text2sql-rag-portfolio" target="_blank" rel="noopener noreferrer">Code &amp; synthetic demo <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="section section-grid reveal" aria-labelledby="selected-title">
+    <p class="section-index">Selected projects</p>
+    <div>
+<h2 id="selected-title">Learning by <em>building.</em>
 </h2>
-</div><a class="text-link" href="projects.html">All projects <span aria-hidden="true">↗</span></a>
-</div>
-<div class="work-grid">
-<article class="work-card reveal" data-category="ai">
-  <div class="work-art compact-art art-system" aria-hidden="true"><span class="art-symbol">∂L / ∂w</span><span class="art-caption">Follow the gradient<br>Understand the learning</span>
-</div>
-  <div class="work-body">
-    <div class="work-meta"><span>Neural network framework</span><span>Spring 2025</span>
-</div>
-    <h3 class="project-title">MyTorch from Scratch</h3>
-    <p>An educational Python and NumPy framework for understanding automatic differentiation, backpropagation, and neural network training.</p>
-    <div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Autodiff</span>
-</div>
-    <a class="text-link" href="https://github.com/kianasherafati/mytorch-from-scratch" target="_blank" rel="noopener noreferrer" aria-label="View MyTorch from Scratch on GitHub">View source <span aria-hidden="true">↗</span></a>
-
-  </div>
-</article>
-<article class="work-card reveal" data-category="systems">
-  <div class="work-art compact-art art-data" aria-hidden="true"><span class="art-symbol">Java → C</span><span class="art-caption">Parse · Resolve<br>Check · Generate</span>
-</div>
-  <div class="work-body">
-    <div class="work-meta"><span>Compiler construction</span><span>Coursework</span>
-</div>
-    <h3 class="project-title">AUJava-to-C Compiler</h3>
-    <p>A three-pass compiler for a Java subset, from parsing and symbol collection to semantic checks and executable C code generation.</p>
-    <div class="tags" aria-label="Technologies"><span class="tag">Java</span><span class="tag">ANTLR4</span><span class="tag">Maven</span><span class="tag">C</span>
-</div>
-    <a class="text-link" href="https://github.com/kianasherafati/AUJava-Transpiler" target="_blank" rel="noopener noreferrer" aria-label="View AUJava-to-C Compiler on GitHub">View source <span aria-hidden="true">↗</span></a>
-
-  </div>
-</article>
-</div>
-</section>
-<section class="section section-grid reveal" id="experience" aria-labelledby="experience-title">
-  <p class="section-index"><span>04 /</span> In practice</p>
-  <div>
-<h2 id="experience-title">Working with data.<br>Learning from <em>real needs.</em>
+      <ul class="selected-list">
+        <li>
+<h3><a href="https://github.com/kianasherafati/mytorch-from-scratch" target="_blank" rel="noopener noreferrer">MyTorch from Scratch ↗</a>
+</h3>
+<p>A NumPy-based neural network framework with automatic differentiation and optimizers.</p>
+</li>
+        <li>
+<h3><a href="https://github.com/kianasherafati/ai-fundamentals" target="_blank" rel="noopener noreferrer">AI Fundamentals ↗</a>
+</h3>
+<p>Course projects in search, reinforcement learning, and Bayesian inference.</p>
+</li>
+        <li>
+<h3><a href="https://github.com/kianasherafati/AUJava-Transpiler" target="_blank" rel="noopener noreferrer">AUJava-to-C Compiler ↗</a>
+</h3>
+<p>A three-pass compiler covering semantic checks, inheritance, and C code generation.</p>
+</li>
+      </ul>
+      <a class="text-link" href="projects.html">Project details &amp; more work <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="section section-grid reveal" id="experience" aria-labelledby="experience-title">
+    <p class="section-index">Experience</p>
+    <div>
+<h2 id="experience-title">In practice &amp; <em>in class.</em>
 </h2>
-    <p class="micro">Green Dataware (Sabz Dadeh) · Tehran</p>
-    <ul class="timeline">
-<li><span class="date">Sept 2025 –<br>Present</span>
-<div>
-<h3>ERP Specialist · Part-time</h3>
-<p>T-SQL business logic, stored procedures, query optimization, and SSRS reporting across ERP modules.</p>
+      <div class="brief-experience">
+<h3>ERP Specialist · Green Dataware (Sabz Dadeh)</h3>
+<p class="micro">Part-time · September 2025 – Present</p>
+<p>T-SQL development, SSRS reporting, and ERP data analysis. Previously an ERP/BI software engineering intern at the same company.</p>
 </div>
-</li>
-<li><span class="date">Summer 2025</span>
-<div>
-<h3>ERP/BI Software Engineering Intern</h3>
-<p>The start of my work at Green Dataware, before continuing as a part-time ERP specialist.</p>
+      <div class="brief-experience">
+<h3>Teaching Assistant · Amirkabir University</h3>
+<p class="micro">2024 – 2026</p>
+<p>Courses in data mining, software engineering, linear algebra, and computer systems. Head Teaching Assistant for Business Intelligence and Analysis in Fall 2025.</p>
 </div>
-</li>
-</ul>
-    <p class="experience-note">My work has also included an HR dashboard with drill-down views, troubleshooting with SQL Server Profiler, client requirements analysis, and product demonstrations.</p>
-  </div>
-</section>
-  <section class="section section-grid reveal" aria-labelledby="teaching-title">
-<p class="section-index"><span>05 /</span> Learning, shared</p>
-<div>
-<h2 id="teaching-title">Understanding grows<br>when you <em>share it.</em>
-</h2>
-<p class="prose">From linear algebra to data mining, teaching has kept me close to the foundations of computing. At Amirkabir, I've also served as Head Teaching Assistant for Business Intelligence and Analysis.</p>
-<ul class="timeline">
-<li><span class="date">Winter 2026</span>
-<div class="teaching-group">
-<div>
-<h3>Data Mining</h3>
-<p>Dr. E. Nazerfard</p>
+      <a class="text-link" href="cv.html">Full experience &amp; academic background <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="personal-note" aria-labelledby="personal-title">
+    <svg viewBox="0 0 180 70" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M0 20Q15 5 30 20T60 20T90 20T120 20T150 20T180 20M0 37Q15 22 30 37T60 37T90 37T120 37T150 37T180 37M0 54Q15 39 30 54T60 54T90 54T120 54T150 54T180 54"/></svg>
+    <div>
+<h2 id="personal-title">Beyond the screen</h2>
+<p>I also swim competitively and won gold and bronze medals at the 2024 Iranian universities' sports Olympiad. The pool is where I recharge.</p>
 </div>
-<div>
-<h3>Software Engineering II</h3>
-<p>Dr. F. Gohari</p>
-</div>
-</div>
-</li>
-<li><span class="date">Fall 2025</span>
-<div class="teaching-group">
-<div>
-<h3>Business Intelligence and Analysis · Head Teaching Assistant</h3>
-<p>Dr. A. Ahmadi</p>
-</div>
-<div>
-<h3>Microprocessor and Assembly Language</h3>
-<p>Dr. H. Farbeh</p>
-</div>
-<div>
-<h3>Applied Linear Algebra</h3>
-<p>Dr. M. Chehreghani</p>
-</div>
-<div>
-<h3>Theory of Machines and Languages</h3>
-<p>Dr. M. Zakeri</p>
-</div>
-<div>
-<h3>Software Engineering I</h3>
-<p>Dr. E. Alirezaei</p>
-</div>
-</div>
-</li>
-<li><span class="date">Fall 2024</span>
-<div class="teaching-group">
-<div>
-<h3>Applied Linear Algebra</h3>
-<p>Dr. E. Nazerfard</p>
-</div>
-<div>
-<h3>Principles of Database Design</h3>
-<p>Dr. Z. Poorbahman</p>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</section>
-  <section class="swim-section reveal" aria-labelledby="beyond-title">
-<div class="swim-art" aria-hidden="true"><span class="swim-star">✳</span><svg viewBox="0 0 600 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M-30 25Q20 0 70 25T170 25T270 25T370 25T470 25T570 25T670 25"/><path d="M-30 48Q20 23 70 48T170 48T270 48T370 48T470 48T570 48T670 48"/><path d="M-30 71Q20 46 70 71T170 71T270 71T370 71T470 71T570 71T670 71"/></svg>
-</div>
-<div>
-<p class="section-index"><span>06 /</span> Beyond the screen</p>
-<h2 id="beyond-title">A different kind<br>of <em>flow state.</em>
-</h2>
-<p>Outside of engineering, you'll find me in the pool. I'm a swimmer and a qualified lifeguard, with gold and bronze medals from the 2024 Iranian universities' sports Olympiad.</p><span class="micro">Curiosity in the classroom. Persistence in the pool.</span>
-</div>
-</section>
+  </section>
 </main>
 
-<section class="contact" id="contact" aria-labelledby="contact-title">
+<section class="contact compact-contact" id="contact" aria-labelledby="contact-title">
   <div class="container contact-inner">
     <div>
-<p class="eyebrow">A conversation starts here</p>
-<h2 id="contact-title">Let's exchange <em>ideas.</em>
-</h2>
-<p>Interested in my work, a research conversation, or an opportunity to learn and collaborate? I'd be happy to hear from you.</p>
+<h2 id="contact-title">Get in touch</h2><a class="contact-email" href="mailto:kiana.sherafati@aut.ac.ir">kiana.sherafati@aut.ac.ir</a>
 </div>
-    <div class="contact-actions"><a class="button" href="mailto:kiana.sherafati@aut.ac.ir">Get in touch <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" hidden>Copy email address</button><span class="copy-status" role="status" aria-live="polite"></span>
+    <div class="contact-actions"><button class="copy-email" type="button" hidden>Copy email address</button><span class="copy-status" role="status" aria-live="polite"></span>
 </div>
   </div>
 </section>
 <footer class="site-footer">
-<div class="container footer-inner"><span>Kiana Sherafati <span aria-hidden="true">·</span> A little corner of the web.</span>
-<div class="footer-links"><a href="mailto:kiana.sherafati@aut.ac.ir">Email ↗</a><a href="https://github.com/kianasherafati" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kiana-sherafati-23b424323/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/kiana_shrfti/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+<div class="container footer-inner"><span>Kiana Sherafati · Updated November 2026</span>
+<div class="footer-links"><a href="https://github.com/kianasherafati" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kiana-sherafati-23b424323/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 </div>
 </div>
 </footer>

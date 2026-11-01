@@ -22,23 +22,6 @@ if ('IntersectionObserver' in window && !motionPreference.matches) {
     }
   });
 }
-const filters = document.querySelector('.filters');
-if (filters) {
-  filters.hidden = false;
-  const cards = [...document.querySelectorAll('[data-category]')];
-  const count = document.querySelector('.project-count');
-  filters.addEventListener('click', event => {
-    const button = event.target.closest('button[data-filter]');
-    if (!button) return;
-    filters.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    let visible = 0;
-    cards.forEach(card => {
-      card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter;
-      if (!card.hidden) { visible++; card.classList.remove('is-pending'); }
-    });
-    count.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'} · ${button.textContent.trim()}`;
-  });
-}
 document.querySelectorAll('.copy-email').forEach(button => {
   if (!navigator.clipboard || !window.isSecureContext) return;
   button.hidden = false;
