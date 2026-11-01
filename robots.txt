@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kianasherafati.github.io/sitemap.xml
