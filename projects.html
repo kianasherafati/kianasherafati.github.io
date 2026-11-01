@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f6f0">
   <title>Projects — Kiana Sherafati</title>
-  <meta name="description" content="Selected projects in web development, Java applications, operating systems, databases, and digital hardware by Kiana Sherafati.">
+  <meta name="description" content="Research and academic projects in retrieval-augmented generation, machine learning, compilers, databases, and software by Kiana Sherafati.">
   <link rel="canonical" href="https://kianasherafati.github.io/projects.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Projects — Kiana Sherafati">
-  <meta property="og:description" content="Selected projects in web development, Java applications, operating systems, databases, and digital hardware by Kiana Sherafati.">
+  <meta property="og:description" content="Research and academic projects in retrieval-augmented generation, machine learning, compilers, databases, and software by Kiana Sherafati.">
   <meta property="og:url" content="https://kianasherafati.github.io/projects.html">
   <meta property="og:image" content="https://kianasherafati.github.io/portrait.jpg">
   <meta property="og:image:alt" content="Portrait of Kiana Sherafati">
@@ -31,132 +31,235 @@
 </header>
 <main id="main" class="container">
 <div class="page-intro">
-<p class="eyebrow">Selected academic & personal work</p>
-<h1>Ideas, made <em>tangible.</em></h1>
-<p>From a visual learning tool to an operating system kernel. A collection of projects through which I've explored software, systems, and the space between.</p>
+<p class="eyebrow">Research &amp; selected academic work</p>
+<h1>Ideas, made <em>tangible.</em>
+</h1>
+<p>From retrieving the right database schema to building a neural network framework. These projects trace my interests in AI, data, and the systems behind them.</p>
 </div>
 <section class="projects-section" aria-label="Project collection">
-<div class="filters" role="group" aria-label="Filter projects by area" hidden><button type="button" data-filter="all" aria-pressed="true">All projects</button><button type="button" data-filter="web" aria-pressed="false">Web</button><button type="button" data-filter="software" aria-pressed="false">Software</button><button type="button" data-filter="systems" aria-pressed="false">Systems & hardware</button>
+<div class="filters" role="group" aria-label="Filter projects by area" hidden><button type="button" data-filter="all" aria-pressed="true">All projects</button><button type="button" data-filter="ai" aria-pressed="false">AI &amp; retrieval</button><button type="button" data-filter="data" aria-pressed="false">Data &amp; BI</button><button type="button" data-filter="systems" aria-pressed="false">Systems &amp; compilers</button><button type="button" data-filter="software" aria-pressed="false">Software</button><button type="button" data-filter="web" aria-pressed="false">Web</button>
 </div>
-<p class="project-count" role="status" aria-live="polite">6 projects · All projects</p>
+<p class="project-count" role="status" aria-live="polite">10 projects · All projects</p>
 <div class="work-grid">
+<article class="work-card reveal" data-category="ai">
+  <div class="work-art compact-art art-chat" aria-hidden="true"><span class="art-symbol">Q → SQL</span><span class="art-caption">Retrieve · Rerank<br>Generate · Validate</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Undergraduate thesis</span><span>Oct 2026</span>
+</div>
+    <h2 class="project-title">ERP Text-to-SQL with RAG</h2>
+    <p>A retrieval-augmented pipeline that translates English ERP reporting questions into SQL Server T-SQL using relevant schema context.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">RAG</span><span class="tag">SQL Server</span><span class="tag">Streamlit</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/erp-text2sql-rag-portfolio" target="_blank" rel="noopener noreferrer" aria-label="View ERP Text-to-SQL with RAG on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Combined BGE-M3 dense retrieval with MiniLM semantic/lexical retrieval and foreign-key expansion, followed by BGE-Reranker-v2-M3 reranking.</li>
+<li>Generated SQL with Qwen2.5-Coder-7B-Instruct and added schema-aware validation and parameterized, read-only previews.</li>
+<li>In thesis experiments, reranking increased macro schema-retrieval recall at 20 tables from 75.27% to 80.77%; this is a retrieval metric, not SQL accuracy.</li>
+<li>The public repository contains reusable components and a synthetic demo; company schemas and connection details are excluded.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="ai">
+  <div class="work-art compact-art art-system" aria-hidden="true"><span class="art-symbol">∂L / ∂w</span><span class="art-caption">Follow the gradient<br>Understand the learning</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Neural network framework</span><span>Spring 2025</span>
+</div>
+    <h2 class="project-title">MyTorch from Scratch</h2>
+    <p>An educational Python and NumPy framework for understanding automatic differentiation, backpropagation, and neural network training.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Autodiff</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/mytorch-from-scratch" target="_blank" rel="noopener noreferrer" aria-label="View MyTorch from Scratch on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Implemented a tensor dependency graph, dense layers, activation functions, and classification and regression losses.</li>
+<li>Added SGD, momentum, RMSProp, and Adam optimizers; applied an MLP to the Breast Cancer Wisconsin (Diagnostic) dataset.</li>
+<li>The coursework version retains unfinished exercises, including its convolution layer; a separate later version supports the FER2013 experiments.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="ai">
+  <div class="work-art compact-art art-hardware" aria-hidden="true"><span class="art-symbol">s → a</span><span class="art-caption">Search the space<br>Learn the policy</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Search, learning &amp; inference</span><span>Coursework</span>
+</div>
+    <h2 class="project-title">AI Fundamentals</h2>
+    <p>Four course projects exploring state-space search, constraints, adversarial search, reinforcement learning, and probabilistic inference.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Gymnasium</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/ai-fundamentals" target="_blank" rel="noopener noreferrer" aria-label="View AI Fundamentals on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Implemented Sokoban search, crossword constraints with AC-3 and heuristic backtracking, and adversarial game search in course-provided environments.</li>
+<li>Explored policy iteration and tabular Q-learning using discretized LunarLander observations.</li>
+<li>Implemented exact Bayesian inference and sampling methods; original reports document the course experiments.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="systems">
+  <div class="work-art compact-art art-data" aria-hidden="true"><span class="art-symbol">Java → C</span><span class="art-caption">Parse · Resolve<br>Check · Generate</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Compiler construction</span><span>Coursework</span>
+</div>
+    <h2 class="project-title">AUJava-to-C Compiler</h2>
+    <p>A three-pass compiler for a Java subset, from parsing and symbol collection to semantic checks and executable C code generation.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Java</span><span class="tag">ANTLR4</span><span class="tag">Maven</span><span class="tag">C</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/AUJava-Transpiler" target="_blank" rel="noopener noreferrer" aria-label="View AUJava-to-C Compiler on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Implemented inheritance resolution, semantic type checking, lexical scoping, and three-address code generation.</li>
+<li>Represented dynamic method dispatch with C structures and function pointers.</li>
+<li>Included 27 positive and negative test cases covering generated-program behavior and semantic error rejection.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="ai">
+  <div class="work-art compact-art art-system" aria-hidden="true"><span class="art-symbol">7 classes</span><span class="art-caption">Convolution<br>Representation · Prediction</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Computer vision</span><span>Coursework</span>
+</div>
+    <h2 class="project-title">FER2013 Emotion Recognition</h2>
+    <p>CNN coursework exploring seven-class facial emotion recognition on FER2013 through PyTorch notebooks and a separate custom MyTorch model.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">PyTorch</span><span class="tag">CNN</span><span class="tag">NumPy</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/fer2013-emotion-recognition-cnn" target="_blank" rel="noopener noreferrer" aria-label="View FER2013 Emotion Recognition on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Prepared PyTorch experiments with image loading, augmentation, and class-weight handling in Colab notebooks.</li>
+<li>Retained a separate custom framework version with convolution and pooling implementations.</li>
+<li>Saved outputs document submitted experiments; the repository does not bundle dataset files or trained weights.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="ai">
+  <div class="work-art compact-art art-hardware" aria-hidden="true"><span class="art-symbol">↻</span><span class="art-caption">Select · Cross over<br>Mutate · Repeat</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Evolutionary search</span><span>Coursework</span>
+</div>
+    <h2 class="project-title">Tetris with a Genetic Algorithm</h2>
+    <p>An evolutionary search project for Tetris placements, with a Pygame visualizer and a report documenting the submitted experiment.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">Genetic algorithms</span><span class="tag">Pygame</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/tetris-evolution-genetic-algorithm" target="_blank" rel="noopener noreferrer" aria-label="View Tetris with a Genetic Algorithm on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Implemented tournament and roulette-wheel selection, single-point and uniform crossover, mutation, and elitism within course scaffolding.</li>
+<li>Included a saved agent, a fitness evolution plot, and a course report.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="data">
+  <div class="work-art compact-art art-chat" aria-hidden="true"><span class="art-symbol">BI</span><span class="art-caption">From employee data<br>To a clearer picture</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Business intelligence</span><span>Data project</span>
+</div>
+    <h2 class="project-title">Employee &amp; HR Analytics</h2>
+    <p>A Power BI dashboard exploring employee distribution, attrition, salary patterns, and hiring trends in an employee dataset.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Power BI</span><span class="tag">Data visualization</span><span class="tag">Python</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/PowerBI-Employee-Analysis" target="_blank" rel="noopener noreferrer" aria-label="View Employee &amp; HR Analytics on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Explored workforce composition, attrition rates, salary distribution, and hiring trends across dataset categories.</li>
+<li>Published the dashboard file, source and cleaned datasets, a preprocessing notebook, and an analysis report.</li>
+<li>This repository project is separate from my professional ERP reporting work.</li>
+</ul>
+</details>
+  </div>
+</article>
+<article class="work-card reveal" data-category="systems">
+  <div class="work-art compact-art art-system" aria-hidden="true"><span class="art-symbol">xv6</span><span class="art-caption">Processes · Threads<br>Inside the kernel</span>
+</div>
+  <div class="work-body">
+    <div class="work-meta"><span>Operating systems</span><span>Fall 2024</span>
+</div>
+    <h2 class="project-title">xv6 Enhancements</h2>
+    <p>Educational extensions to the xv6 RISC-V kernel, exploring system calls, process reporting, and basic threading.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">C</span><span class="tag">RISC-V</span><span class="tag">xv6</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/xv6-enhancements" target="_blank" rel="noopener noreferrer" aria-label="View xv6 Enhancements on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
+<summary>Implementation details</summary>
+<ul>
+<li>Added child-process information, trap reporting, and thread creation, join, and stop interfaces.</li>
+<li>Extended process reporting with CPU usage, quotas, and fork-with-deadline behavior.</li>
+<li>Built on MIT’s xv6 teaching kernel; upstream acknowledgments and licensing are retained.</li>
+</ul>
+</details>
+  </div>
+</article>
 <article class="work-card reveal" data-category="web">
-<div class="work-art vocab-art" aria-hidden="true"><span class="art-label">Learning, one picture at a time</span>
-<div class="vocab-tile"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M31 21c-21-16-29 10-17 27 8 12 13 5 18 6 5-1 10 6 18-6 12-17 4-43-18-27Z"/><path d="M32 23c-3-10 3-16 10-17-1 8-5 11-10 12"/></svg><span>apple</span>
+  <div class="work-art compact-art art-chat" aria-hidden="true"><span class="art-symbol">Aa</span><span class="art-caption">A picture<br>A word · A connection</span>
 </div>
-<div class="vocab-tile second"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 14c10-3 17-1 24 5 7-6 14-8 24-5v36c-10-3-17-1-24 5-7-6-14-8-24-5Z"/><path d="M32 19v36M14 23c5-1 9 0 12 2M38 25c3-2 7-3 12-2M14 31c5-1 9 0 12 2M38 33c3-2 7-3 12-2"/></svg><span>book</span>
+  <div class="work-body">
+    <div class="work-meta"><span>Educational web application</span><span>Fall 2024</span>
 </div>
+    <h2 class="project-title">Learning English with Pictures</h2>
+    <p>A visual vocabulary-learning microservice with content management, search by category and level, and learner progress reports.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">JavaScript</span>
 </div>
-<div class="work-body">
-<div class="work-meta"><span>Web development</span><span>Fall 2024</span>
-</div>
-<h2 class="project-title">Learning English with Pictures</h2>
-<p>A visual vocabulary-learning microservice that connects software engineering with a more approachable learning experience.</p>
-<div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">JavaScript</span>
-</div><a class="text-link" href="https://github.com/kianasherafati/Learning-English-with-pictures" target="_blank" rel="noopener noreferrer" aria-label="View Learning English with Pictures on GitHub">View source <span aria-hidden="true">↗</span></a>
-<details class="project-details">
+    <a class="text-link" href="https://github.com/kianasherafati/Learning-English-with-pictures" target="_blank" rel="noopener noreferrer" aria-label="View Learning English with Pictures on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
 <summary>Implementation details</summary>
 <ul>
-<li>Implemented vocabulary creation, editing, deletion, and search by category and level.</li>
-<li>Developed learner progress tracking and reports.</li>
-<li>Wrote tests to check system reliability.</li></ul></details>
-</div>
+<li>Implemented vocabulary creation, editing, deletion, and search.</li>
+<li>Developed progress tracking and reports, with tests for system reliability.</li>
+<li>The linked repository points to the original course project.</li>
+</ul>
+</details>
+  </div>
 </article>
 <article class="work-card reveal" data-category="software">
-<div class="work-art network-art" aria-hidden="true"><span class="art-label">A small world, connected</span><svg viewBox="0 0 300 190" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M68 44 150 94 235 39M150 94l81 56M150 94l-90 57M68 44l-8 107M235 39l-4 111" stroke-dasharray="4 5" opacity=".4"/><circle cx="150" cy="94" r="34" fill="#fff9f6"/><circle cx="68" cy="44" r="21" fill="#fff9f6"/><circle cx="235" cy="39" r="18" fill="#fff9f6"/><circle cx="231" cy="150" r="24" fill="#fff9f6"/><circle cx="60" cy="151" r="16" fill="#fff9f6"/><path d="M135 85h30v19h-18l-7 6v-6h-5Z"/><path d="M143 92h15M143 97h10"/><circle cx="68" cy="39" r="5"/><path d="M59 54c0-11 18-11 18 0"/></svg>
+  <div class="work-art compact-art art-data" aria-hidden="true"><span class="art-symbol">↔</span><span class="art-caption">People · Posts<br>A connected timeline</span>
 </div>
-<div class="work-body">
-<div class="work-meta"><span>Software development</span><span>June 2023</span>
+  <div class="work-body">
+    <div class="work-meta"><span>Desktop application</span><span>June 2023</span>
 </div>
-<h2 class="project-title">Twitter Simulation</h2>
-<p>A multithreaded social networking application built with Java and JavaFX, from user accounts to a dynamic timeline.</p>
-<div class="tags" aria-label="Technologies"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">Concurrency</span>
-</div><a class="text-link" href="https://github.com/kianasherafati/Twitter-final" target="_blank" rel="noopener noreferrer" aria-label="View Twitter Simulation on GitHub">View source <span aria-hidden="true">↗</span></a>
-<details class="project-details">
+    <h2 class="project-title">Twitter Simulation</h2>
+    <p>A multithreaded social networking simulation built with Java and JavaFX, from user accounts to a dynamic timeline.</p>
+    <div class="tags" aria-label="Technologies"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">Concurrency</span>
+</div>
+    <a class="text-link" href="https://github.com/kianasherafati/Twitter-final" target="_blank" rel="noopener noreferrer" aria-label="View Twitter Simulation on GitHub">View source <span aria-hidden="true">↗</span></a>
+    <details class="project-details">
 <summary>Implementation details</summary>
 <ul>
-<li>Implemented registration, login, profiles, and follow/unfollow interactions.</li>
-<li>Supported tweets, retweets, likes, and blocklists.</li>
-<li>Used multithreading to handle concurrent interactions.</li></ul></details>
-</div>
-</article>
-<article class="work-card reveal" data-category="systems">
-<div class="work-art compact-art art-system" aria-hidden="true"><span class="art-symbol">xv6</span><span class="art-caption">Under the hood<br>of an operating system</span>
-</div>
-<div class="work-body">
-<div class="work-meta"><span>Systems programming</span><span>Fall 2024</span>
-</div>
-<h2 class="project-title">XV6 Operating System</h2>
-<p>An exploration of operating system internals through extensions to the xv6 educational kernel.</p>
-<div class="tags" aria-label="Technologies"><span class="tag">C</span><span class="tag">xv6</span><span class="tag">Docker</span>
-</div><a class="text-link" href="Kiana.CV.pdf" target="_blank" rel="noopener">Project in CV <span aria-hidden="true">↗</span></a>
-<details class="project-details">
-<summary>Implementation details</summary>
-<ul>
-<li>Added custom system calls.</li>
-<li>Enabled basic multithreading capabilities.</li></ul></details>
-</div>
-</article>
-<article class="work-card reveal" data-category="software">
-<div class="work-art compact-art art-data" aria-hidden="true"><span class="art-symbol">{ }</span><span class="art-caption">People, records<br>& a little Python</span>
-</div>
-<div class="work-body">
-<div class="work-meta"><span>Desktop application</span><span>July 2024</span>
-</div>
-<h2 class="project-title">User Management</h2>
-<p>A Python desktop application that brings a Tkinter interface together with a SQLite database.</p>
-<div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">SQLite</span>
-</div><a class="text-link" href="Kiana.CV.pdf" target="_blank" rel="noopener">Project in CV <span aria-hidden="true">↗</span></a>
-<details class="project-details">
-<summary>Implementation details</summary>
-<ul>
-<li>Built a user management system simulation with a graphical interface.</li>
-<li>Integrated SQLite for persistent data storage.</li></ul></details>
-</div>
-</article>
-<article class="work-card reveal" data-category="software">
-<div class="work-art compact-art art-chat" aria-hidden="true"><span class="art-symbol">↔</span><span class="art-caption">Private conversations<br>Shared spaces</span>
-</div>
-<div class="work-body">
-<div class="work-meta"><span>Backend development</span><span>June 2024</span>
-</div>
-<h2 class="project-title">Chatroom</h2>
-<p>Backend logic for a Python chatroom with authentication, contact lists, and private and group messaging.</p>
-<div class="tags" aria-label="Technologies"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Authentication</span>
-</div><a class="text-link" href="Kiana.CV.pdf" target="_blank" rel="noopener">Project in CV <span aria-hidden="true">↗</span></a>
-<details class="project-details">
-<summary>Implementation details</summary>
-<ul>
-<li>Implemented user authentication and user management.</li>
-<li>Supported private conversations, group chats, and contact lists.</li>
-<li>Integrated MySQL and database views.</li></ul></details>
-</div>
-</article>
-<article class="work-card reveal" data-category="systems">
-<div class="work-art compact-art art-hardware" aria-hidden="true"><span class="art-symbol">01</span><span class="art-caption">From logic<br>to play</span>
-</div>
-<div class="work-body">
-<div class="work-meta"><span>Digital hardware</span><span>January 2024</span>
-</div>
-<h2 class="project-title">Two-player Fighting Game</h2>
-<p>A two-player game designed and simulated in Verilog, with an implementation on an FPGA board.</p>
-<div class="tags" aria-label="Technologies"><span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">ISE Design Suite</span>
-</div><a class="text-link" href="Kiana.CV.pdf" target="_blank" rel="noopener">Project in CV <span aria-hidden="true">↗</span></a>
-<details class="project-details">
-<summary>Implementation details</summary>
-<ul>
-<li>Implemented movement, jumping, and kicking actions.</li>
-<li>Designed game logic with three lives for each player.</li>
-<li>Simulated the design and implemented it on an FPGA board.</li></ul></details>
-</div>
+<li>Implemented registration, login, profiles, follow/unfollow, and blocklists.</li>
+<li>Supported tweets, retweets, and likes with concurrent interactions.</li>
+</ul>
+</details>
+  </div>
 </article>
 </div>
-</section></main>
+<p class="collection-note">Coursework repositories include student implementations alongside course-provided scaffolding. Repository notes and reports describe the scope, original experiments, and source acknowledgments.</p>
+</section>
+</main>
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="container contact-inner">
     <div>
 <p class="eyebrow">A conversation starts here</p>
-<h2 id="contact-title">Let's exchange <em>ideas.</em></h2>
+<h2 id="contact-title">Let's exchange <em>ideas.</em>
+</h2>
 <p>Interested in my work, a research conversation, or an opportunity to learn and collaborate? I'd be happy to hear from you.</p>
 </div>
     <div class="contact-actions"><a class="button" href="mailto:kiana.sherafati@aut.ac.ir">Get in touch <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" hidden>Copy email address</button><span class="copy-status" role="status" aria-live="polite"></span>

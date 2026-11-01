@@ -15,19 +15,25 @@ Then visit `http://localhost:4173`.
 
 ## Updating content
 
-- `index.html`: introduction, interests, selected work, teaching, and swimming.
-- `projects.html`: six projects, technology tags, source links, and expandable details.
-- `cv.html`: education, teaching, skills, training, and honors.
-- `Kiana.CV.pdf`: downloadable CV. Replace this file when a newer CV is available,
-  then update the dated overview, GPA, education status, and experience on the pages.
+- `index.html`: introduction, research, selected work, professional experience,
+  teaching, and swimming.
+- `projects.html`: ten public projects, area filters, source links, and expandable details.
+- `cv.html`: education, research, professional experience, projects, teaching, skills,
+  honors, and languages.
+- `Academic_CV.pdf`: current downloadable CV. `Kiana.CV.pdf` contains the same
+  document so existing incoming download links remain current. Replace both when
+  updating the CV, then synchronize the GPA, degree status, and experience on the pages.
 - `portrait.jpg`: site portrait; the original photograph is also retained.
 - `style.css`: shared colors, typography, layout, responsive rules, and animations.
 - `site.js`: progressive enhancements for project filtering, scroll reveals, and email copying.
 - `favicon.svg`, `robots.txt`, and `sitemap.xml`: site identity and search metadata.
 
-The academic content is based on the CV supplied in May 2025 and the existing
-portfolio. No publications, research appointments, or newer qualifications are implied.
-Project illustrations are decorative diagrams, not screenshots of the applications.
+Academic and professional content follows the updated CV supplied in November 2026.
+Project descriptions also draw on the linked public GitHub repositories. The thesis
+result is macro schema-retrieval recall at 20 tables in the thesis experiments;
+it does not represent query-generation accuracy. Coursework scope and attributions
+remain documented in the respective repositories. Project illustrations are
+decorative diagrams, not application screenshots.
 
 ## Accessibility and deployment
 
