@@ -24,7 +24,8 @@ Then visit `http://localhost:4173`.
 - `Academic_CV.pdf`: current downloadable CV. `Kiana.CV.pdf` contains the same
   document so existing incoming download links remain current. Replace both when
   updating the CV, then synchronize the GPA, degree status, and experience on the pages.
-- `portrait.jpg`: site portrait; the original photograph is also retained.
+- `portrait-2026.jpg`: current site portrait, framed with CSS for the homepage.
+  `portrait.jpg` and the original bookshelf photograph are retained as earlier assets.
 - `style.css`: shared colors, typography, layout, responsive rules, and animations.
 - `site.js`: progressive enhancements for scroll reveals and email copying.
 - `favicon.svg`, `robots.txt`, and `sitemap.xml`: site identity and search metadata.
