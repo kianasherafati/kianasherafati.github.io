@@ -7,7 +7,8 @@
 % September 2025 follows the stated Summer 2025 internship chronology.
 % Thesis supervisor/date and retrieval result verified against kiana_thesis.pdf.
 % Additional projects selected after review of the GitHub portfolio.
-% New project dates and teaching duties were not supplied and are omitted.
+% Project years follow the supplied CV, dated coursework reports, and
+% implementation history. The degree dates describe academic attendance.
 
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
@@ -39,7 +40,7 @@
 \setlength{\footskip}{20pt}
 
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titlespacing*{\section}{0pt}{14pt}{6pt}
 \setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,
   parsep=0pt,partopsep=0pt}
 
@@ -50,9 +51,9 @@
   \end{tabularx}\par}
 \newcommand{\detail}[1]{{\small\textit{#1}}\par}
 \newcommand{\project}[3]{%
-  \vspace{4pt}\entry{#1}{#2}%
+  \vspace{8pt}\entry{#1}{#2}%
   \detail{#3}}
-\newcommand{\skill}[2]{\textbf{#1:} #2\par\vspace{3pt}}
+\newcommand{\skill}[2]{\textbf{#1:} #2\par\vspace{6pt}}
 
 \begin{document}
 
@@ -72,132 +73,112 @@
 
 \section{Education}
 \entry{Amirkabir University of Technology (Tehran Polytechnic)}{2022--2026}
-\detail{B.Sc. in Computer Engineering \textbar\ Tehran, Iran}
-\begin{itemize}
-  \item \textbf{Final cumulative GPA: 17.81/20.}
-  \item Completed all coursework and degree requirements in 2026.
-\end{itemize}
+\detail{B.Sc. in Computer Engineering \textbar\ GPA: 17.81/20}
 
 \section{Research Experience}
 \entry{Natural Language to SQL Query Generation for ERP Systems\newline
   Using Retrieval-Augmented Generation (RAG)}{2026}
-\detail{Undergraduate Thesis \textbar\ Successfully defended and completed}
+\detail{Undergraduate thesis \textbar\ Successfully defended}
 \detail{Supervisor: Dr. Masoumeh Taromi Rad \textbar\
   \href{https://github.com/kianasherafati/erp-text2sql-rag-portfolio}{Public repository}}
 \begin{itemize}
-  \item Designed and implemented a retrieval-augmented pipeline translating
-    English ERP reporting questions into Microsoft SQL Server T-SQL,
-    addressing abbreviated identifiers and complex schema relationships.
-  \item Combined BGE-M3 dense retrieval with MiniLM semantic/lexical
-    retrieval and foreign-key expansion; merged candidates and reranked
-    them with BGE-Reranker-v2-M3 before Qwen2.5-Coder-7B-Instruct generation.
-  \item Evaluated schema retrieval and analyzed errors in SQL generation,
-    execution, and result correctness. Reranking increased macro schema
-    recall at 20 tables from \textbf{75.27\% to 80.77\%} in thesis experiments.
-  \item Implemented schema-aware SQL validation and parameterized,
-    read-only previews through a Streamlit interface. Released reusable
-    components and a synthetic demo while excluding company schemas
-    and connection details.
+  \item Built a RAG pipeline that translates English ERP reporting questions
+    into T-SQL for Microsoft SQL Server, using schema context to resolve
+    abbreviated identifiers and complex table relationships.
+  \item Combined BGE-M3 dense retrieval, MiniLM hybrid retrieval, and
+    foreign-key expansion. Ranked candidate tables with BGE-Reranker-v2-M3
+    to supply schema context to Qwen2.5-Coder-7B-Instruct.
+  \item Compared schema retrieval with and without reranking. Macro table
+    Recall@20, the mean share of required tables retrieved in the top 20
+    per question, rose from \textbf{75.27\% to 80.77\%}. Reviewed query
+    execution and result correctness separately.
+  \item Implemented schema-aware SQL validation and parameterized, read-only
+    previews in Streamlit. Released reusable components and a synthetic demo.
 \end{itemize}
 
 \section{Professional Experience}
 \entry{Green Dataware (Sabz Dadeh)}{Tehran, Iran}
-\entry{ERP Specialist \normalfont(part-time)}{Sept. 2025 -- Present}
-\detail{Previously: ERP/BI Software Engineering Intern, Summer 2025}
+\begin{tabularx}{\linewidth}{@{}X@{\hspace{0.8em}}r@{}}
+  ERP Specialist (part-time) & {\small September 2025 -- Present}\\
+  ERP/BI Software Engineering Intern & {\small Summer 2025}
+\end{tabularx}\par
 \begin{itemize}
-  \item Developed SSRS organizational reports with dynamic tables and
-    print-ready layouts, and an HR dashboard with drill-down views of
-    headcount, contracts, and organizational units.
-  \item Implemented ERP business logic using T-SQL and stored procedures;
-    optimized queries and analyzed relationships across ERP modules.
-  \item Diagnosed system issues using SQL Server Profiler and participated
-    in client requirements analysis and product demonstrations.
+  \item Built print-ready SSRS reports and an HR dashboard with drill-down
+    views of headcount, contracts, and organizational units.
+  \item Implemented ERP business logic in T-SQL stored procedures, optimized
+    queries, and analyzed data relationships across ERP modules.
+  \item Diagnosed ERP issues with SQL Server Profiler, analyzed client
+    requirements, and supported product demonstrations.
 \end{itemize}
 
-\section{Honors \& Distinctions}
-\entry{Iranian Nationwide University Entrance Examination}{2022}
-Entrance examination rank: \textbf{163}.\par
-% Confirm the ranking category (e.g., national or quota/region) before
-% replacing the neutral wording above with a more specific claim.
-\vspace{5pt}
-\entry{Gold and Bronze Medals in Collegiate Swimming}{2024}
-Individual and relay events, 16th Cultural and Sports Olympiad for
-Students of Iranian Universities.
+\section{Technical Skills}
+\skill{Programming languages}{Python, SQL/T-SQL, C, C++, Java, JavaScript}
+\skill{Machine learning and retrieval}{PyTorch, NumPy, pandas, scikit-learn,
+  Transformers, SentenceTransformers, FAISS}
+\skill{Databases and reporting}{SQL Server, MySQL, SQLite, SSRS, Power BI,
+  SQLGlot, pyodbc}
+\skill{Frameworks and development tools}{Streamlit, Django, Git, Docker,
+  ANTLR4, Maven}
+\skill{Additional technologies}{HTML/CSS, Verilog, VHDL, \LaTeX}
 
-% Intentional page break between academic/professional work and teaching,
-% additional projects, and technical skills.
 \newpage
 
 \section{Selected Academic Projects}
-\project{MyTorch: Neural Network Framework}{Spring 2025}
-  {Python, NumPy \textbar\
-  \href{https://github.com/kianasherafati/mytorch-from-scratch}{Source code}}
-\begin{itemize}
-  \item Developed an educational neural network framework with tensor
-    automatic differentiation, backpropagation, dense layers, activation
-    functions, and classification/regression losses.
-  \item Implemented SGD, momentum, RMSProp, and Adam optimizers; applied
-    an MLP to the Breast Cancer Wisconsin (Diagnostic) dataset.
-\end{itemize}
-
-\project{AI Fundamentals: Search, Learning and Inference}{}
-  {Python, NumPy, Gymnasium \textbar\
-  \href{https://github.com/kianasherafati/ai-fundamentals}{Source code and reports}}
-\begin{itemize}
-  \item Implemented state-space search for Sokoban, AC-3 and heuristic
-    backtracking for crossword constraints, and adversarial game search
-    within course-provided environments.
-  \item Explored policy iteration and tabular Q-learning with discretized
-    LunarLander observations; implemented exact Bayesian inference and
-    sampling methods, with reports documenting the course experiments.
-\end{itemize}
-
-\project{AUJava-to-C Compiler}{}
+\project{AUJava-to-C Compiler}{2026}
   {Java, ANTLR4, Maven, C \textbar\
   \href{https://github.com/kianasherafati/AUJava-Transpiler}{Source code}}
 \begin{itemize}
-  \item Built a three-pass compiler for a Java subset, covering parsing,
-    symbol collection, inheritance resolution, semantic type checking,
-    lexical scoping, and C code generation.
-  \item Implemented dynamic method dispatch using C structures and
-    function pointers; included 27 positive and negative test cases
-    for generated-program behavior and semantic error rejection.
+  \item Built a three-pass compiler for a Java subset, resolving inheritance,
+    checking types and lexical scope, and generating C code from ANTLR4 parse trees.
+  \item Implemented dynamic dispatch with C structs and function pointers.
+    Included 27 tests covering generated program behavior and semantic errors.
 \end{itemize}
 
-\section{Teaching Assistant Experience}
-\textbf{Amirkabir University of Technology}\par
-\vspace{4pt}
-\begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}l@{}}
-  \textbf{Winter 2026} & \textbf{Instructor}\\[3pt]
-  Data Mining & Dr. E. Nazerfard\\[3pt]
-  Software Engineering II & Dr. F. Gohari\\[6pt]
-  \textbf{Fall 2025} & \\[3pt]
-  Business Intelligence and Analysis \textbf{(Head Teaching Assistant)} & Dr. A. Ahmadi\\[3pt]
-  Microprocessor and Assembly Language & Dr. H. Farbeh\\[3pt]
-  Applied Linear Algebra & Dr. M. Chehreghani\\[3pt]
-  Theory of Machines and Languages & Dr. M. Zakeri\\[3pt]
-  Software Engineering I & Dr. E. Alirezaei\\[6pt]
-  \textbf{Fall 2024} & \\[3pt]
-  Applied Linear Algebra & Dr. E. Nazerfard\\[3pt]
-  Principles of Database Design & Dr. Z. Poorbahman
+\project{AI Fundamentals: Search, Learning and Inference}{2025}
+  {Python, NumPy, Gymnasium \textbar\
+  \href{https://github.com/kianasherafati/ai-fundamentals}{Source code and reports}}
+\begin{itemize}
+  \item Implemented state-space search for Sokoban, constraint solving for
+    crosswords using AC-3 and backtracking, and adversarial search for Isolation.
+  \item Explored policy iteration and tabular Q-learning on LunarLander.
+    Implemented exact and sampling-based inference for Bayesian networks.
+\end{itemize}
+
+\project{MyTorch: Neural Network Framework}{2025}
+  {Python, NumPy \textbar\
+  \href{https://github.com/kianasherafati/mytorch-from-scratch}{Source code}}
+\begin{itemize}
+  \item Built a NumPy neural network framework with tensor-based automatic
+    differentiation, backpropagation, dense layers, and classification and regression losses.
+  \item Implemented SGD, momentum, RMSProp, and Adam. Trained a multilayer
+    perceptron on the Breast Cancer Wisconsin (Diagnostic) dataset.
+\end{itemize}
+
+\section{Teaching Experience}
+\textbf{Teaching Assistant} \textbar\ Amirkabir University of Technology\par
+\vspace{5pt}
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{1.25em}}>{\raggedright\arraybackslash}X@{\hspace{1em}}l@{}}
+  \textbf{Winter 2026} & Data Mining & Dr. E. Nazerfard\\[2pt]
+  & Software Engineering II & Dr. F. Gohari\\[5pt]
+  \textbf{Fall 2025} & Business Intelligence and Analysis & Dr. A. Ahmadi\\
+  & \textit{Head Teaching Assistant} & \\[2pt]
+  & Microprocessor and Assembly Language & Dr. H. Farbeh\\[2pt]
+  & Applied Linear Algebra & Dr. M. Chehreghani\\[2pt]
+  & Theory of Machines and Languages & Dr. M. Zakeri\\[2pt]
+  & Software Engineering I & Dr. E. Alirezaei\\[5pt]
+  \textbf{Fall 2024} & Applied Linear Algebra & Dr. E. Nazerfard\\[2pt]
+  & Principles of Database Design & Dr. Z. Poorbahman
 \end{tabularx}
 
-\section{Technical Skills}
-\begingroup\small
-\skill{Programming}{Python, SQL/T-SQL, C, C++, Java, JavaScript}
-\skill{Machine learning \& data analysis}{PyTorch, NumPy, pandas,
-  scikit-learn; neural networks, reinforcement learning, Bayesian inference}
-\skill{LLMs \& retrieval}{Transformers, SentenceTransformers, FAISS,
-  retrieval-augmented generation, hybrid schema retrieval, reranking}
-\skill{Databases \& business intelligence}{SQL Server, MySQL, SQLite,
-  SSRS, Power BI}
-\skill{Software development}{Django, Streamlit, SQLGlot, pyodbc, Git, Docker; object-oriented
-  programming, design patterns, microservices, unit testing}
-\skill{Other}{ANTLR4, Maven, HTML/CSS, Verilog, VHDL, \LaTeX}
-\endgroup
+\section{Honors \& Distinctions}
+\entry{Rank 163, Iranian Nationwide University Entrance Examination}{2022}
+\vspace{5pt}
+\entry{Gold and Bronze Medals in Collegiate Swimming}{2024}
+Individual and relay events at the 16th Cultural and Sports Olympiad for
+Students of Iranian Universities.\par
 
 \section{Languages}
-Persian (native); English (advanced).
+Persian (native), English (advanced)
 
 % Flush the final page, then verify the two-page limit in compiler diagnostics.
 \AtEndDocument{%
