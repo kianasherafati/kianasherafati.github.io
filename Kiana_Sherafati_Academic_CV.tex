@@ -1,0 +1,211 @@
+% Academic CV for master's applications -- Kiana Sherafati
+% Compile with pdfLaTeX (Overleaf: Compiler > pdfLaTeX).
+% Self-contained source: no external images, fonts, or bibliography required.
+% Original supplied template: Dubasi Pavan Kumar, MIT license.
+%
+% Content updated from the supplied CV, project README, and follow-up details.
+% September 2025 follows the stated Summer 2025 internship chronology.
+% Thesis supervisor/date and retrieval result verified against kiana_thesis.pdf.
+% Additional projects selected after review of the GitHub portfolio.
+% New project dates and teaching duties were not supplied and are omitted.
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage[margin=1.7cm,top=1.5cm,bottom=1.6cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\definecolor{accent}{HTML}{203B53}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent,
+  pdftitle={Kiana Sherafati -- Academic CV},pdfauthor={Kiana Sherafati}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\raggedright
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\textcolor{gray}{Kiana Sherafati}}
+\fancyfoot[R]{\footnotesize\thepage\,/\,2}
+\setlength{\footskip}{20pt}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,
+  parsep=0pt,partopsep=0pt}
+
+% A wrapping left column keeps long titles clear of right-aligned dates.
+\newcommand{\entry}[2]{%
+  \begin{tabularx}{\linewidth}{@{}X@{\hspace{0.8em}}r@{}}%
+  \textbf{#1} & {\small #2}\\%
+  \end{tabularx}\par}
+\newcommand{\detail}[1]{{\small\textit{#1}}\par}
+\newcommand{\project}[3]{%
+  \vspace{4pt}\entry{#1}{#2}%
+  \detail{#3}}
+\newcommand{\skill}[2]{\textbf{#1:} #2\par\vspace{3pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Kiana Sherafati}\\[5pt]
+  {\small Tehran, Iran\enspace\textbar\enspace +98-912-979-6935
+    \enspace\textbar\enspace
+    \href{mailto:kiana.sherafati@gmail.com}{kiana.sherafati@gmail.com}}\\[3pt]
+  {\small
+    \href{https://github.com/kianasherafati}{github.com/kianasherafati}
+    \enspace\textbar\enspace
+    \href{https://www.linkedin.com/in/kiana-sherafati-23b424323/}{LinkedIn}
+    \enspace\textbar\enspace
+    \href{https://kianasherafati.github.io}{kianasherafati.github.io}}
+\end{center}
+\vspace{-7pt}
+
+\section{Education}
+\entry{Amirkabir University of Technology (Tehran Polytechnic)}{2022--2026}
+\detail{B.Sc. in Computer Engineering \textbar\ Tehran, Iran}
+\begin{itemize}
+  \item \textbf{Final cumulative GPA: 17.81/20.}
+  \item Completed all coursework and degree requirements in 2026.
+\end{itemize}
+
+\section{Research Experience}
+\entry{Natural Language to SQL Query Generation for ERP Systems\newline
+  Using Retrieval-Augmented Generation (RAG)}{2026}
+\detail{Undergraduate Thesis \textbar\ Successfully defended and completed}
+\detail{Supervisor: Dr. Masoumeh Taromi Rad \textbar\
+  \href{https://github.com/kianasherafati/erp-text2sql-rag-portfolio}{Public repository}}
+\begin{itemize}
+  \item Designed and implemented a retrieval-augmented pipeline translating
+    English ERP reporting questions into Microsoft SQL Server T-SQL,
+    addressing abbreviated identifiers and complex schema relationships.
+  \item Combined BGE-M3 dense retrieval with MiniLM semantic/lexical
+    retrieval and foreign-key expansion; merged candidates and reranked
+    them with BGE-Reranker-v2-M3 before Qwen2.5-Coder-7B-Instruct generation.
+  \item Evaluated schema retrieval and analyzed errors in SQL generation,
+    execution, and result correctness. Reranking increased macro schema
+    recall at 20 tables from \textbf{75.27\% to 80.77\%} in thesis experiments.
+  \item Implemented schema-aware SQL validation and parameterized,
+    read-only previews through a Streamlit interface. Released reusable
+    components and a synthetic demo while excluding company schemas
+    and connection details.
+\end{itemize}
+
+\section{Professional Experience}
+\entry{Green Dataware (Sabz Dadeh)}{Tehran, Iran}
+\entry{ERP Specialist \normalfont(part-time)}{Sept. 2025 -- Present}
+\detail{Previously: ERP/BI Software Engineering Intern, Summer 2025}
+\begin{itemize}
+  \item Developed SSRS organizational reports with dynamic tables and
+    print-ready layouts, and an HR dashboard with drill-down views of
+    headcount, contracts, and organizational units.
+  \item Implemented ERP business logic using T-SQL and stored procedures;
+    optimized queries and analyzed relationships across ERP modules.
+  \item Diagnosed system issues using SQL Server Profiler and participated
+    in client requirements analysis and product demonstrations.
+\end{itemize}
+
+\section{Honors \& Distinctions}
+\entry{Iranian Nationwide University Entrance Examination}{2022}
+Entrance examination rank: \textbf{163}.\par
+% Confirm the ranking category (e.g., national or quota/region) before
+% replacing the neutral wording above with a more specific claim.
+\vspace{5pt}
+\entry{Gold and Bronze Medals in Collegiate Swimming}{2024}
+Individual and relay events, 16th Cultural and Sports Olympiad for
+Students of Iranian Universities.
+
+% Intentional page break between academic/professional work and teaching,
+% additional projects, and technical skills.
+\newpage
+
+\section{Selected Academic Projects}
+\project{MyTorch: Neural Network Framework}{Spring 2025}
+  {Python, NumPy \textbar\
+  \href{https://github.com/kianasherafati/mytorch-from-scratch}{Source code}}
+\begin{itemize}
+  \item Developed an educational neural network framework with tensor
+    automatic differentiation, backpropagation, dense layers, activation
+    functions, and classification/regression losses.
+  \item Implemented SGD, momentum, RMSProp, and Adam optimizers; applied
+    an MLP to the Breast Cancer Wisconsin (Diagnostic) dataset.
+\end{itemize}
+
+\project{AI Fundamentals: Search, Learning and Inference}{}
+  {Python, NumPy, Gymnasium \textbar\
+  \href{https://github.com/kianasherafati/ai-fundamentals}{Source code and reports}}
+\begin{itemize}
+  \item Implemented state-space search for Sokoban, AC-3 and heuristic
+    backtracking for crossword constraints, and adversarial game search
+    within course-provided environments.
+  \item Explored policy iteration and tabular Q-learning with discretized
+    LunarLander observations; implemented exact Bayesian inference and
+    sampling methods, with reports documenting the course experiments.
+\end{itemize}
+
+\project{AUJava-to-C Compiler}{}
+  {Java, ANTLR4, Maven, C \textbar\
+  \href{https://github.com/kianasherafati/AUJava-Transpiler}{Source code}}
+\begin{itemize}
+  \item Built a three-pass compiler for a Java subset, covering parsing,
+    symbol collection, inheritance resolution, semantic type checking,
+    lexical scoping, and C code generation.
+  \item Implemented dynamic method dispatch using C structures and
+    function pointers; included 27 positive and negative test cases
+    for generated-program behavior and semantic error rejection.
+\end{itemize}
+
+\section{Teaching Assistant Experience}
+\textbf{Amirkabir University of Technology}\par
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}l@{}}
+  \textbf{Winter 2026} & \textbf{Instructor}\\[3pt]
+  Data Mining & Dr. E. Nazerfard\\[3pt]
+  Software Engineering II & Dr. F. Gohari\\[6pt]
+  \textbf{Fall 2025} & \\[3pt]
+  Business Intelligence and Analysis \textbf{(Head Teaching Assistant)} & Dr. A. Ahmadi\\[3pt]
+  Microprocessor and Assembly Language & Dr. H. Farbeh\\[3pt]
+  Applied Linear Algebra & Dr. M. Chehreghani\\[3pt]
+  Theory of Machines and Languages & Dr. M. Zakeri\\[3pt]
+  Software Engineering I & Dr. E. Alirezaei\\[6pt]
+  \textbf{Fall 2024} & \\[3pt]
+  Applied Linear Algebra & Dr. E. Nazerfard\\[3pt]
+  Principles of Database Design & Dr. Z. Poorbahman
+\end{tabularx}
+
+\section{Technical Skills}
+\begingroup\small
+\skill{Programming}{Python, SQL/T-SQL, C, C++, Java, JavaScript}
+\skill{Machine learning \& data analysis}{PyTorch, NumPy, pandas,
+  scikit-learn; neural networks, reinforcement learning, Bayesian inference}
+\skill{LLMs \& retrieval}{Transformers, SentenceTransformers, FAISS,
+  retrieval-augmented generation, hybrid schema retrieval, reranking}
+\skill{Databases \& business intelligence}{SQL Server, MySQL, SQLite,
+  SSRS, Power BI}
+\skill{Software development}{Django, Streamlit, SQLGlot, pyodbc, Git, Docker; object-oriented
+  programming, design patterns, microservices, unit testing}
+\skill{Other}{ANTLR4, Maven, HTML/CSS, Verilog, VHDL, \LaTeX}
+\endgroup
+
+\section{Languages}
+Persian (native); English (advanced).
+
+% Flush the final page, then verify the two-page limit in compiler diagnostics.
+\AtEndDocument{%
+  \clearpage
+  \ifnum\value{page}=3\relax
+  \else
+    \PackageError{academic-cv}{CV must contain exactly two pages}%
+      {Shorten or reflow the content to restore the two-page layout.}%
+  \fi
+}
+\end{document}
